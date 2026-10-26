@@ -1703,6 +1703,47 @@
   }
 }
 
+
+/* フッターの公式サイトリンク */
+.footer-official-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 0 12px 4px;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.footer-official-links a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-official-links a:hover {
+  opacity: 0.75;
+}
+
+.footer-link-divider {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* スマホ表示 */
+@media (max-width: 480px) {
+  .footer-official-links {
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
+  }
+
+  .footer-link-divider {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -1903,7 +1944,7 @@
       <h2 style="font-size:20px;">在校生・保護者専用ページ</h2>
       <p style="margin-top:10px;">シフト表などの当日情報は、聖学院のGoogleアカウントでログインしている方のみ閲覧できます。下のリンクを開くと、学校のGoogleアカウントでのログインが求められます。</p>
       <div class="link-list">
-        <a href="#" target="_blank" rel="noopener"><span>📋 企画シフト表(Googleスプレッドシート)</span><span>→</span></a>
+        <a href="https://docs.google.com/spreadsheets/d/1EUR2n5R9lt0RfI9zYVbc22z8ba_dJlyD-ildw2uyaBo/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer"><span>📋 企画シフト表(Googleスプレッドシート)</span><span>→</span></a>
       </div>
       <p style="margin-top:18px; font-size:12.5px;">※スプレッドシートのリンクに飛ばされます。</p>
     </div>
@@ -1918,7 +1959,16 @@
   </div>
 </div>
 
-<footer>聖学院 120周年記念祭 高校1年学年企画サイト</footer>
+<footer>聖学院 120周年記念祭 高校1年学年企画サイト<div class="footer-official-links">
+  <a href="https://www.seigakuin.ed.jp/" target="_blank" rel="noopener noreferrer">
+    聖学院公式ホームページ
+  </a>
+  <span class="footer-link-divider">｜</span>
+  <a href="https://seig-creation120.studio.site/" target="_blank" rel="noopener noreferrer">
+    聖学院120周年記念祭ホームページ
+  </a>
+</div></footer>
+
 
 <script>
   const projects = [
