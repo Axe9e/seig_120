@@ -1823,6 +1823,72 @@
     background-color: #fffdf5;
   }
 }
+
+
+/* ===== スマホ版：ブログの背景を修正 ===== */
+@media (max-width: 760px) {
+
+  /* 学校の写真をブログ部分にも表示 */
+  .anniversary-section {
+    position: relative;
+    isolation: isolate;
+
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    border-radius: 0;
+  }
+
+  /* 写真の上に白い半透明レイヤーを重ねる */
+  .anniversary-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 252, 245, 0.72);
+
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* 説明文を読みやすい色に戻す */
+  #overview .anniversary-info p {
+    color: #211a3e !important;
+  }
+}
+
+
+/* ===== 企画の概要画面：暗さを軽減 ===== */
+
+/* 背景を暗くするレイヤーを薄くする */
+.modal-overlay {
+  background: rgba(25, 19, 51, 0.25) !important;
+}
+
+/* 企画概要のカードを明るくする */
+.modal {
+  background: #fffdf5 !important;
+  color: #211a3e !important;
+}
+
+/* 見出し・説明文の文字色を統一 */
+.modal h2,
+.modal h3,
+.modal p,
+.modal span,
+.modal li,
+.modal dt,
+.modal dd {
+  color: #211a3e;
+}
+
+/* 閉じるボタンも明るくする */
+.modal-close {
+  background: #fff8e9 !important;
+  color: #211a3e !important;
+}
 </style>
 </head>
 <body>
