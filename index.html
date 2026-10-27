@@ -1796,6 +1796,33 @@
   }
 
 }
+
+
+/* ===== スマホ版：ブログ・地図の背景を修正 ===== */
+@media (max-width: 760px) {
+
+  /* ブログ：background.png の上に白い半透明の背景 */
+  .anniversary-section {
+    background-color: rgba(255, 252, 245, 0.82);
+    border-radius: 24px;
+  }
+
+  /* 地図：バニラ色の背景にする */
+  #access {
+    background-color: #fff8e9;
+    color: #211a3e;
+    border-radius: 24px;
+  }
+
+  /* 地図の外側もバニラ色に統一 */
+  #access .access-map {
+    background-color: #fff8e9;
+  }
+
+  #access .access-info {
+    background-color: #fffdf5;
+  }
+}
 </style>
 </head>
 <body>
