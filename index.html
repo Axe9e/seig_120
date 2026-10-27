@@ -1744,6 +1744,58 @@
     display: none;
   }
 }
+
+/* ===== スマホ版：画面の左寄り・横はみ出し対策 ===== */
+@media (max-width: 560px) {
+
+  /* ヘッダー全体を画面幅に収める */
+  .nav-wrap {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  /* 左側のロゴが縮まないようにする */
+  .brand {
+    flex: 0 0 auto;
+    min-width: 0;
+    gap: 6px;
+  }
+
+  .brand img {
+    max-width: 36px;
+    height: 30px !important;
+    object-fit: contain;
+  }
+
+  /* ナビゲーションを残りの幅に収める */
+  .nav-wrap nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: flex-end;
+    gap: 3px;
+    padding: 2px 2px 6px;
+  }
+
+  /* 3つのボタンをスマホ幅に合わせる */
+  .nav-wrap nav button:nth-child(1),
+  .nav-wrap nav button:nth-child(2),
+  .nav-wrap nav button:nth-child(3) {
+    flex: 0 1 auto;
+    width: clamp(68px, 22vw, 90px);
+    min-width: 0;
+  }
+
+  /* ページ全体の横方向のはみ出しを防ぐ */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+}
 </style>
 </head>
 <body>
