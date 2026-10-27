@@ -1887,6 +1887,51 @@
   background: #fff8e9 !important;
   color: #211a3e !important;
 }
+
+
+
+
+/* ===== スマホ版：タイトル下の空白を削除 ===== */
+@media (max-width: 560px) {
+  .hero {
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .content-sheet {
+    margin-top: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+
+
+
+/* ===== ブログ部分：バニラ色＋白い半透明レイヤー ===== */
+@media (max-width: 760px) {
+  #overview {
+    background: transparent !important;
+  }
+
+  .content-sheet::before {
+    background: rgba(255, 248, 233, 0.78) !important;
+  }
+
+  .anniversary-section {
+    background: transparent !important;
+  }
+
+  .anniversary-section::before {
+    background: rgba(255, 248, 233, 0.78) !important;
+  }
+
+  #overview .section-head h2,
+  #overview .anniversary-info h2,
+  #overview .anniversary-info p {
+    color: #211a3e !important;
+  }
+}
 </style>
 </head>
 <body>
