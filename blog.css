@@ -553,3 +553,54 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===== 記事本文の写真 ===== */
+
+.article-inline-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 32px auto;
+}
+
+.article-inline-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.article-inline-image figcaption {
+  margin-top: 8px;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ===== 複数写真のギャラリー ===== */
+
+.article-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.article-gallery .article-inline-image {
+  margin: 0;
+}
+
+.article-gallery .article-inline-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ===== スマートフォン ===== */
+
+@media (max-width: 600px) {
+  .article-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
