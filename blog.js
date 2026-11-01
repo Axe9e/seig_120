@@ -339,7 +339,7 @@ const articles = [
   {
     id: "festival-start",
 
-    title: "記念祭の準備がスタート！",
+    title: "記念祭の準備がスタートa！",
 
     date: "2026-10-30",
 
